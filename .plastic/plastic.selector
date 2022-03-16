@@ -1,0 +1,4 @@
+repository "Survivle@Pyme@cloud"
+  path "/"
+    br "/main"
+    co "/main"
