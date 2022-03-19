@@ -38,8 +38,9 @@ public class Inventory : MonoBehaviour
         //}
        
     }
-    public void pickup()
+    public void pickup(GameObject a)
     {
+        a.SetActive(false);
         byte id = gameObject.GetComponent<Player>().id;
         if (id == 3)
         {

@@ -3196,11 +3196,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7522674955419049045, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7522674955419049045, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522674955419049047, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522674955419049047, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7522674955419049047, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3219,8 +3227,12 @@ PrefabInstance:
       value: Inventory, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7522674955419049047, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1569873095}
+    - target: {fileID: 7522674955419049047, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1034483fc22f934aad76a9c3ab188c1, type: 3}

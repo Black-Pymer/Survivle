@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
                         if (nr.type == i)
                         {
                             buttons[i].gameObject.SetActive(true);
+                            break;
                         }
                     }
                 }
