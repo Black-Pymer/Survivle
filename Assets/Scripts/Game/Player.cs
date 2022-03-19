@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
-        transform.Translate(direction * speed * Time.fixedDeltaTime);
+        transform.Translate(direction * speed * Time.fixedDeltaTime*Time.timeScale);
         //начало работы с текстом hp
         hpt.text = health.ToString();
         if (health <= 0 )

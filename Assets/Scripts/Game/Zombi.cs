@@ -78,7 +78,7 @@ public class Zombi : MonoBehaviour
     {
         if (playerInArea)
         {
-            rb.MovePosition(transform.position + transform.forward * Time.deltaTime * speed);
+            rb.MovePosition(transform.position + transform.forward * Time.deltaTime * speed*Time.timeScale);
             
         }
     }

@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
 {
     #region variablesAndStart
     public byte[] slots=new byte[15];
-    public byte objectInHand;//ебну если удали
+    [HideInInspector]public byte objectInHand;//ебну если удали
     public GameObject pistol;
     //воздух - 0 
     //аптечка - 1
