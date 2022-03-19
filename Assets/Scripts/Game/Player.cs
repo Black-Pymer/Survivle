@@ -49,13 +49,15 @@ public class Player : MonoBehaviour
     }
     #endregion
     #region pickUpItems
-    private void Update()
+    void Update()
     {
         Ray forwardRay = new Ray(Camera.transform.position,Camera.transform.forward);
         Debug.DrawRay(Camera.transform.position, Camera.transform.forward * 5f, Color.red);
         RaycastHit hit;
+        
         if (Physics.Raycast(forwardRay, out hit))
         {
+
             if (hit.distance < 5f)
             {
                 if (hit.collider.gameObject.layer == 6)
@@ -101,5 +103,6 @@ public class Player : MonoBehaviour
             buttons[i].SetActive(false);
         }
     }
+    
     #endregion
 }
