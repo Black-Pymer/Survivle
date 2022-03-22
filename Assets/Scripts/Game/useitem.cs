@@ -20,9 +20,5 @@ public class useitem : MonoBehaviour
             pistol.SetActive(!pistol.activeSelf);
             Pl.objectInHand = 2;
         }
-        //if (im.sprite == Resources.Load<Sprite>("patronage_icon")) 
-        //{
-            //pistol.GetComponent<pistol>().bulletsout +=18;
-        //}
     }
 }

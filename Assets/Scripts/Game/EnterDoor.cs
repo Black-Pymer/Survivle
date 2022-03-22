@@ -36,22 +36,17 @@ public class EnterDoor : MonoBehaviour
             if (scene_num == 0)
             {
                 PlayerPrefs.SetInt("Scene_num", SceneManager.GetActiveScene().buildIndex + 1);
-                PlayerPrefs.SetInt("ObjectInHand", inv.objectInHand);
-                PlayerPrefs.SetInt("bulletsin", pistol.GetComponent<pistol>().bulletsin);
-                PlayerPrefs.SetInt("bulletsout", pistol.GetComponent<pistol>().bulletsout);
-                PlayerPrefs.SetInt("health", (int)lp.health);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
             }
             else
             {
                 PlayerPrefs.SetInt("Scene_num", scene_num);
-                PlayerPrefs.SetInt("ObjectInHand", inv.objectInHand);
-                PlayerPrefs.SetInt("bulletsin", pistol.GetComponent<pistol>().bulletsin);
-                PlayerPrefs.SetInt("bulletsout", pistol.GetComponent<pistol>().bulletsout);
-                PlayerPrefs.SetInt("health", (int)lp.health);
-                SceneManager.LoadScene(scene_num);
             }
-            
+            PlayerPrefs.SetInt("ObjectInHand", inv.objectInHand);
+            PlayerPrefs.SetInt("bulletsin", (int)pistol.GetComponent<pistol>().bulletsin);
+            PlayerPrefs.SetInt("bulletsout", (int)pistol.GetComponent<pistol>().bulletsout);
+            PlayerPrefs.SetInt("health", (int)lp.health);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

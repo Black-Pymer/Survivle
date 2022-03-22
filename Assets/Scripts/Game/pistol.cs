@@ -9,6 +9,7 @@ public class pistol : MonoBehaviour
     public GameObject Camera;
 
     private bool canShoot = true;
+    private bool isReloading;
     // Start is called before the first frame update
     void OnLevelWasLoaded()
     {
@@ -17,7 +18,7 @@ public class pistol : MonoBehaviour
     }
     public void Shoot()
     {
-        if (bulletsin == 0)
+        if (bulletsin == 0&&!isReloading)
         {
             Reload();
             canShoot = false;
@@ -44,6 +45,9 @@ public class pistol : MonoBehaviour
     }
     public void Reload()
     {
+        isReloading = true;
+        Camera.transform.parent.gameObject.GetComponent<Player>().txtUnderCamera.text = "Reloading weapon...";//Тронешь - ёбну
+
         if (bulletsout >= 6)
         {
             Invoke("Rel", 1.5f);
@@ -57,5 +61,6 @@ public class pistol : MonoBehaviour
     {
         bulletsin += 6;
         bulletsout -= 6;
+        isReloading = false;
     }
 }
