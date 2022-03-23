@@ -22,7 +22,7 @@ public class EnterDoor : MonoBehaviour
         Debug.Log("ButtonPressed");
         if (PlayerPrefs.GetInt("status") >= status)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             //string a = File.ReadAllText(inv.savePath);
             //iif = JsonUtility.FromJson<InventoryInFile>(a); потом почини это дерьмо я не вкурсе как ;)
             //SceneManager.LoadScene(iif.scene);
@@ -36,7 +36,7 @@ public class EnterDoor : MonoBehaviour
             if (scene_num == 0)
             {
                 PlayerPrefs.SetInt("Scene_num", SceneManager.GetActiveScene().buildIndex + 1);
-                
+
             }
             else
             {
