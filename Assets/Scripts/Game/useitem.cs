@@ -22,14 +22,20 @@ public class useitem : MonoBehaviour
             pistol.SetActive(!pistol.activeSelf);
             Pl.objectInHand = 2;
         }
-        else if (im.sprite = Resources.Load<Sprite>("health_icon"))
+        else if (im.sprite = Resources.Load<Sprite>("heal_icon"))
         {
             for(int i=1; i <= 15; i++)
             {
                 if (obj.name == "slot" + i.ToString())
                 {
+                    i--;
                     inv.slots[i] = 0;
+                    im.sprite = Resources.Load<Sprite>("air_icon");
                     Pl.health += 75;
+                    if (Pl.health > 100)
+                    {
+                        Pl.health = 100; 
+                    }
                     break;
                 }
             }

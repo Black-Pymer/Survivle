@@ -20,7 +20,7 @@ public class EnterDoor : MonoBehaviour
     public void buttonPressed()
     {
         Debug.Log("ButtonPressed");
-        if (PlayerPrefs.GetInt("status") >= status)
+        if (lp.status >= status)
         {
             //Time.timeScale = 0;
             //string a = File.ReadAllText(inv.savePath);
@@ -33,20 +33,23 @@ public class EnterDoor : MonoBehaviour
                 PlayerPrefs.SetInt("slot" + i.ToString(), inv.slots[a]);
                 i--;
             }
+            PlayerPrefs.SetInt("ObjectInHand", inv.objectInHand);
+            PlayerPrefs.SetInt("bulletsin", (int)pistol.GetComponent<pistol>().bulletsin);
+            PlayerPrefs.SetInt("bulletsout", (int)pistol.GetComponent<pistol>().bulletsout);
+            PlayerPrefs.SetInt("health", (int)lp.health);
             if (scene_num == 0)
             {
                 PlayerPrefs.SetInt("Scene_num", SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             }
             else
             {
                 PlayerPrefs.SetInt("Scene_num", scene_num);
+                SceneManager.LoadScene(scene_num);
             }
-            PlayerPrefs.SetInt("ObjectInHand", inv.objectInHand);
-            PlayerPrefs.SetInt("bulletsin", (int)pistol.GetComponent<pistol>().bulletsin);
-            PlayerPrefs.SetInt("bulletsout", (int)pistol.GetComponent<pistol>().bulletsout);
-            PlayerPrefs.SetInt("health", (int)lp.health);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
+            
         }
     }
 }

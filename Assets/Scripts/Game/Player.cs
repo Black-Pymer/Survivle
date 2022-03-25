@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField]private pistol pist;
     private bool canShoot;
 
-    public byte id;
+    public byte id =0;
+    public byte status = (byte)PlayerPrefs.GetInt("status");
     public GameObject Camera;
     public int health = 100;
     public TextMeshPro hpt;//текст про hp

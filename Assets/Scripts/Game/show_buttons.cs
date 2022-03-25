@@ -40,14 +40,14 @@ public class show_buttons : MonoBehaviour
             }
 
         }
-        if (slots[1].gameObject.activeSelf)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        //if (slots[1].gameObject.activeSelf)
+        //{
+            //Time.timeScale = 0;
+        //}
+        //else
+        //{
+            //Time.timeScale = 1;
+        //}
         
     }
 

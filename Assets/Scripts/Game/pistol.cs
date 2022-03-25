@@ -18,7 +18,7 @@ public class pistol : MonoBehaviour
     }
     public void Shoot()
     {
-        if (bulletsin == 0&&!isReloading)
+        if (bulletsin == 0)
         {
             Reload();
             canShoot = false;
