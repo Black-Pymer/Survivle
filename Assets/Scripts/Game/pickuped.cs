@@ -6,6 +6,7 @@ public class pickuped : MonoBehaviour
 {
     public int g;
     public string name;
+    public GameObject obj;
     private void Start()
     {
         if (PlayerPrefs.GetInt(name) == 0)
@@ -18,7 +19,7 @@ public class pickuped : MonoBehaviour
         }
         else if(PlayerPrefs.GetInt(name) == 2)
         {
-            Rigidbody.Destroy(this);
+            Destroy(obj);
             Debug.Log("Привет ты лох, если будешь багаюзить данную механику");
         }
         Debug.Log(name+PlayerPrefs.GetInt(name).ToString());
