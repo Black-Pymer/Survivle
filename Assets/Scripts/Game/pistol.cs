@@ -20,7 +20,10 @@ public class pistol : MonoBehaviour
     {
         if (bulletsin == 0)
         {
+            if(!isReloading)
+            {
             Reload();
+            }
             canShoot = false;
         }
         else
@@ -46,7 +49,7 @@ public class pistol : MonoBehaviour
     public void Reload()
     {
         isReloading = true;
-        Camera.transform.parent.gameObject.GetComponent<Player>().txtUnderCamera.text = "Reloading weapon...";//Тронешь - ёбну
+        Camera.transform.parent.gameObject.GetComponent<Player>().txtUnderCamera.text = "Reloading weapon...";
 
         if (bulletsout >= 6)
         {
@@ -54,7 +57,7 @@ public class pistol : MonoBehaviour
         }
         else
         {
-            Debug.Log("Нету патронов");
+            Debug.Log("РќРµС‚Сѓ РїР°С‚СЂРѕРЅРѕРІРІ");
         }
     }
     void Rel()

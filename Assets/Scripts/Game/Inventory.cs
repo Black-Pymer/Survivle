@@ -15,6 +15,9 @@ public class Inventory : MonoBehaviour
     //патроны - 3
     //палки -4
     //жига - 5
+    //
+    // ороче теперь тут есть новые Player Prefs
+    //level3.1
     #endregion
     #region PickUpAndLoadInventory
     // Start is called before the first frame update
