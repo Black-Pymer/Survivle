@@ -50,6 +50,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+        pl.col.GetComponent<pickuped>().g = 2;
         Destroy(pl.col.gameObject);
     }
     #endregion

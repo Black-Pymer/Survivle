@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pickuped : MonoBehaviour
 {
-    public int g;
+    public int g = 1;
     public string name;
     public GameObject obj;
     private void Start()
@@ -26,6 +26,6 @@ public class pickuped : MonoBehaviour
     }
     public void OnDestroy()
     {
-        PlayerPrefs.SetInt(name,2);
+        PlayerPrefs.SetInt(name,g);
     }
 }
