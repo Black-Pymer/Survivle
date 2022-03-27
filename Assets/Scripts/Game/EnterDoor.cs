@@ -37,6 +37,7 @@ public class EnterDoor : MonoBehaviour
             PlayerPrefs.SetInt("bulletsin", (int)pistol.GetComponent<pistol>().bulletsin);
             PlayerPrefs.SetInt("bulletsout", (int)pistol.GetComponent<pistol>().bulletsout);
             PlayerPrefs.SetInt("health", (int)lp.health);
+            PlayerPrefs.SetInt("status",(int)lp.status);
             if (scene_num == 0)
             {
                 PlayerPrefs.SetInt("Scene_num", SceneManager.GetActiveScene().buildIndex + 1);

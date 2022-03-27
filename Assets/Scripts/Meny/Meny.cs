@@ -55,7 +55,7 @@ public class Meny : MonoBehaviour
             }
             scene++;
         }
-        
+        PlayerPrefs.SetInt("health",100);
         
         CreateAndLoad();
     }

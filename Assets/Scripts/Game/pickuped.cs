@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class pickuped : MonoBehaviour
 {
+    public int f = 0;
     public int g = 1;
     public string name;
     public GameObject obj;
+    private void FixedUpdate()
+    {
+        if (f == 2)
+        {
+            PlayerPrefs.SetInt(name,2);
+            f = 0;
+        }
+    }
     private void Start()
     {
         if (PlayerPrefs.GetInt(name) == 0)
@@ -19,13 +28,10 @@ public class pickuped : MonoBehaviour
         }
         else if(PlayerPrefs.GetInt(name) == 2)
         {
+            Debug.Log("Если ты будешь работать, то будет кайфово");
             Destroy(obj);
-            Debug.Log("Привет ты лох, если будешь багаюзить данную механику");
         }
         Debug.Log(name+PlayerPrefs.GetInt(name).ToString());
     }
-    public void OnDestroy()
-    {
-        PlayerPrefs.SetInt(name,g);
-    }
+    
 }

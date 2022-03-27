@@ -11,7 +11,7 @@ public class pistol : MonoBehaviour
     private bool canShoot = true;
     private bool isReloading;
     // Start is called before the first frame update
-    void OnLevelWasLoaded()
+    void Start()
     {
         bulletsin = PlayerPrefs.GetInt("bulletsin");
         bulletsout = PlayerPrefs.GetInt("bulletsout");
