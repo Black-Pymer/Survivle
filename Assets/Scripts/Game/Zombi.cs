@@ -34,7 +34,6 @@ public class Zombi : MonoBehaviour
     {
         if (playerInArea)
         {
-            Debug.Log(3);
             healthText.text=health.ToString();
             transform.LookAt(player.transform.position);
             an.SetBool("inPlayer", true);
@@ -42,10 +41,8 @@ public class Zombi : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(checkPlayer,out hit))
             {
-                Debug.Log(4);
                 if (hit.distance < 3&&hit.collider.gameObject.name=="Player"&&isready==true)
                 {
-                    Debug.Log(5);
                     Invoke("damage",1f);
                     isready = false;
                     

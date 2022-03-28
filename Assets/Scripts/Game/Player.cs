@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private bool canShoot;
 
     public byte id =0;
-    public byte status = (byte)PlayerPrefs.GetInt("status");
+    public byte status;
     public GameObject Camera;
     public int health = 100;
     public TextMeshPro hpt;//текст про hp
@@ -21,11 +21,13 @@ public class Player : MonoBehaviour
     [HideInInspector]public byte objectInHand;
     private void OnLevelWasLoaded(int level)
     {
+        status = (byte)PlayerPrefs.GetInt("status");
         health = PlayerPrefs.GetInt("health");
         status = (byte)PlayerPrefs.GetInt("status");
     }
     void Start()
     {
+
         rb=GetComponent<Rigidbody>();
         Debug.Log(PlayerPrefs.GetInt("slot0"));
         Debug.Log(PlayerPrefs.GetInt("slot1"));
@@ -105,7 +107,7 @@ public class Player : MonoBehaviour
         {
             buttons[i].SetActive(false);
         }
+        
     }
-    
     #endregion
 }

@@ -5035,6 +5035,7 @@ MonoBehaviour:
   bulletsin: 0
   bulletsout: 0
   Camera: {fileID: 371357198}
+  isReloading: 0
 --- !u!65 &1750791208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5820,7 +5821,7 @@ PrefabInstance:
       objectReference: {fileID: 1750791205}
     - target: {fileID: 5732433126473866504, guid: bfc81280e19995449810ef6fe66fc35e, type: 3}
       propertyPath: scene_num
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc81280e19995449810ef6fe66fc35e, type: 3}
