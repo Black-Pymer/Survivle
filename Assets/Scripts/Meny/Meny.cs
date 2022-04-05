@@ -7,6 +7,7 @@ using UnityEngine.Android;
 public class Meny : MonoBehaviour
 {
     private int iif;
+    private int scene = 3;
     private byte i;
     private void Start()
     {
@@ -41,6 +42,21 @@ public class Meny : MonoBehaviour
             PlayerPrefs.SetInt("slot" + i.ToString(), 0);
         }
         PlayerPrefs.SetInt("status",0);
+        for (int b = 3; b<60;b++)
+        {
+            for (int i = 1; i < 15; i += 1)
+            {
+                PlayerPrefs.SetInt("level" + scene.ToString()+ "." + i.ToString(), 0);
+                Debug.Log("level" + scene.ToString()+"." + i.ToString());
+                if (i >= 15)
+                {
+                    break;
+                }
+            }
+            scene++;
+        }
+        PlayerPrefs.SetInt("health",100);
+        
         CreateAndLoad();
     }
     void CreateAndLoad()

@@ -15,6 +15,14 @@ public class Inventory : MonoBehaviour
     //патроны - 3
     //палки -4
     //жига - 5
+    //карточка - 6
+    //
+    //
+    //
+    //
+    //
+    // ороче теперь тут есть новые Player Prefs
+    //level3.1
     #endregion
     #region PickUpAndLoadInventory
     // Start is called before the first frame update
@@ -35,6 +43,12 @@ public class Inventory : MonoBehaviour
             Debug.Log("Wow!");
             pistol.GetComponent<pistol>().bulletsout += 30;
         }
+        else if (id == 6)
+        {
+            pl.status = pl.col.gameObject.GetComponent<Card>().stat;
+            pl.col.gameObject.GetComponent<pickuped>().f = 2; //ѕотом по€сни зачем мне писать GameObject
+            Invoke("del", 0.1f);
+        }
         else
         {
             for (int i = 0; i < slots.Length; i++)
@@ -43,10 +57,18 @@ public class Inventory : MonoBehaviour
                 {
                     slots[i] = id;
                     pl.Unenable();
+                    pl.col.gameObject.GetComponent<pickuped>().f = 2; //ѕотом по€сни зачем мне писать GameObject
+                    Invoke("del", 0.1f);
                     break;
                 }
             }
         }
+        
+        
+    }
+    void del()
+    {
+        Player pl = gameObject.GetComponent<Player>();
         Destroy(pl.col.gameObject);
     }
     #endregion

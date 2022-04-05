@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
         health = PlayerPrefs.GetInt("health");
+        status = (byte)PlayerPrefs.GetInt("status");
     }
     void Start()
     {
