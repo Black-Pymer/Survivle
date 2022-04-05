@@ -15,6 +15,8 @@ public class EnterDoor : MonoBehaviour
     {
         inv=GameObject.Find("Player").GetComponent<Inventory>();
         lp = GameObject.Find("Player").GetComponent<Player>();
+        pistol.SetActive(true);
+        Invoke("pistdis",0.1f);
     }
     // Start is called before the first frame update
     public void buttonPressed()
@@ -52,5 +54,9 @@ public class EnterDoor : MonoBehaviour
             
             
         }
+    }
+    private void pistdis()
+    {
+        pistol.SetActive(false);
     }
 }

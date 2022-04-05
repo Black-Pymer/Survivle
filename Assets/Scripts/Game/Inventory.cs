@@ -38,18 +38,20 @@ public class Inventory : MonoBehaviour
     {
         byte id = gameObject.GetComponent<Player>().id;
         Player pl = gameObject.GetComponent<Player>();
-        if (id == 3)
+        if (id == 3) //Патроны
         {
             Debug.Log("Wow!");
             pistol.GetComponent<pistol>().bulletsout += 30;
-        }
-        else if (id == 6)
-        {
-            pl.status = pl.col.gameObject.GetComponent<Card>().stat;
-            pl.col.gameObject.GetComponent<pickuped>().f = 2; //Потом поясни зачем мне писать GameObject
+            pl.col.gameObject.GetComponent<pickuped>().f = 2; 
             Invoke("del", 0.1f);
         }
-        else
+        else if (id == 6)//Карта
+        {
+            pl.status = pl.col.gameObject.GetComponent<Card>().stat;
+            pl.col.gameObject.GetComponent<pickuped>().f = 2; 
+            Invoke("del", 0.1f);
+        }
+        else//Всё остальное
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -57,7 +59,7 @@ public class Inventory : MonoBehaviour
                 {
                     slots[i] = id;
                     pl.Unenable();
-                    pl.col.gameObject.GetComponent<pickuped>().f = 2; //Потом поясни зачем мне писать GameObject
+                    pl.col.gameObject.GetComponent<pickuped>().f = 2; 
                     Invoke("del", 0.1f);
                     break;
                 }
@@ -66,7 +68,7 @@ public class Inventory : MonoBehaviour
         
         
     }
-    void del()
+    void del()//Удаление объеста с минимальной задержкой
     {
         Player pl = gameObject.GetComponent<Player>();
         Destroy(pl.col.gameObject);

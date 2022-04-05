@@ -9,7 +9,7 @@ public class pistol : MonoBehaviour
     public GameObject Camera;
 
     private bool canShoot = true;
-    private bool isReloading;
+    public bool isReloading = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class pistol : MonoBehaviour
     {
         if (bulletsin == 0)
         {
-            if(!isReloading)
+            if(!isReloading&&bulletsout!=0)
             {
             Reload();
             }
